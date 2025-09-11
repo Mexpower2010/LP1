@@ -18,8 +18,8 @@ public class MB_1414_AcimaDaMedia {
 
     public static void imprimirPorcentAlunosAcimaDaMedia() {
 
-        int qtdCasosTest = lerNumInt();
-        for (int i = 0; i < qtdCasosTest; i++) {
+        int qtdSalas = lerNumInt();
+        for (int i = 0; i < qtdSalas; i++) {
 
             int qtdNotas = lerNumInt();
             int[] notas = lerNotas(qtdNotas);

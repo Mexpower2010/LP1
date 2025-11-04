@@ -6,33 +6,29 @@ public class matrizv {
     final static Scanner SC = new Scanner(System.in);
 
     public static int[][] criarMatrix(int N) {
-        int[][] matrix = new int[N][N];
-        int inicio = N / 3;
-        int fim = N - inicio - 1;
-        int centro = N / 2;
-        
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                matrix[i][j] = 0;
+    int[][] matrix = new int[N][N];
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            matrix[i][j] = 0;
+            
+            if (i == j) {
+                matrix[i][j] = 2;
+            }else if (i + j == N - 1) {
+                matrix[i][j] = 3;
             }
-        }
-        
-       
-        for (int i = inicio; i <= fim; i++) {
-            for (int j = inicio; j <= fim; j++) {
+            if (i >= N/3 && i < N - N/3 && j >= N/3 && j < N - N/3) {
                 matrix[i][j] = 1;
             }
+            
+            if (i == N/2 && j == N/2) {
+                matrix[i][j] = 4;
+            }
         }
-        
-        for (int i = 0; i < N; i++) {
-            matrix[i][i] = 2; 
-            matrix[i][N - 1 - i] = 3; 
-        }
-        
-        matrix[centro][centro] = 4;
-        
-        return matrix;
     }
+    
+    return matrix;
+}
     public static void imprimirMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) { 
             for (int j = 0; j < matrix[i].length; j++) { 

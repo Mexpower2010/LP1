@@ -5,13 +5,12 @@ public class areaInf {
     final static Scanner LER = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String O = lerChar();
-
+        char O = lerChar();
         double[][] matriz = lerMatriz(12, 12);
 
         double S = calcularSoma(matriz);
 
-        if (O == "S") {
+        if (O == 'S') {
             imprimirResult(S);
 
         }else{
@@ -51,9 +50,9 @@ public class areaInf {
         return matriz;
     }
 
-    public static String lerChar() {
-        String valor;
-        valor = LER.next();
+    public static char lerChar() {
+        char valor;
+        valor = LER.next().charAt(0);
         return valor;
     }
 }

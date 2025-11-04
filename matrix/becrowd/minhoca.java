@@ -1,7 +1,5 @@
-package matrix.becrowd;
 import java.util.Scanner;
 
-import estudos.PrefixSums.execicio.soma;
 public class minhoca {
     final static Scanner SC = new Scanner(System.in);
     public static void main(String[] args) {

@@ -1,4 +1,3 @@
-package matrix.becrowd;
 import java.util.Scanner;
 import java.util.HashSet;
 import java.util.Set;
